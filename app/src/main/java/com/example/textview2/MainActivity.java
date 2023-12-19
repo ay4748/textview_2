@@ -2,6 +2,7 @@ package com.example.textview2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button btn;
     TextView tV;
+    int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dodge(View view) {
+        counter +=1;
+        tV.setTextColor(Color.RED);
+        tV.setText("This is a click number:"+counter);
     }
+
 }
